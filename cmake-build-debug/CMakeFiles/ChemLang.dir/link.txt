@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/ChemLang.dir/main.cpp.o  -o ChemLang 
