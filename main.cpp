@@ -57,6 +57,8 @@ enum NODE_TYPE {
     NUM,
     INPUT,
     OUTPUT,
+    EXPLODE,
+    RAMEXPLODE
 };
 
 struct value_t {
@@ -281,6 +283,12 @@ void saveASNode(node_t *node, FILE *f) {
             break;
         case B:
             fprintf(f, "BLOCK ");
+            break;
+        case EXPLODE:
+            fprintf(f, "EXPLODE ");
+            break;
+        case RAMEXPLODE:
+            fprintf(f, "RAMEXPLODE ");
             break;
         case ARITHM_OP:
             switch (v->id) {
@@ -795,7 +803,8 @@ node_t *getOp(token_t **tokens) {
             (*tokens)++;
 
             return varNode;
-        } else if ((*tokens)->id == taste) {
+        }
+        else if ((*tokens)->id == taste) {
             (*tokens)++;
 
             if (((*tokens)->type != SPECIAL_SYMBOL || (*tokens)->id != left))
@@ -897,7 +906,31 @@ node_t *getOp(token_t **tokens) {
             (*tokens)++;
 
             return inputNode;
-        } else {
+        } else if ((*tokens)->id == explode) {
+            (*tokens)++;
+
+            value_t *explodeValue = makeValue(EXPLODE, 0);
+            node_t *explodeNode = makeNode(nullptr, nullptr, nullptr, explodeValue);
+
+            if ((*tokens)->type != SPECIAL_SYMBOL || (*tokens)->id != semicolon)
+                return nullptr;
+
+            (*tokens)++;
+
+            return explodeNode;
+        } else if ((*tokens)->id == ramexplode) {
+            (*tokens)++;
+
+            value_t *explodeValue = makeValue(RAMEXPLODE, 0);
+            node_t *explodeNode = makeNode(nullptr, nullptr, nullptr, explodeValue);
+
+            if ((*tokens)->type != SPECIAL_SYMBOL || (*tokens)->id != semicolon)
+                return nullptr;
+
+            (*tokens)++;
+
+            return explodeNode;
+        }else {
             return nullptr;
         }
     } else if ((*tokens)->type == IDENTIFIER) {
