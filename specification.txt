@@ -1,0 +1,16 @@
++ - add
+- - filter
+* - mix
+/ - steal
+d/dx - ask_for_mathematician
+var - testtube
+if - taste
+else - emergencyroom
+< - sourer
+> - bitterer
+== - justlike
+= - is
+return - synthesize
+function - labassistant
+{ - labprotocol
+} - endprotocol

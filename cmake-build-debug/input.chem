@@ -1,0 +1,64 @@
+labassistan discriminant(a, b, c) labprotocol
+    testtube disc;
+    disc is b mix b filter B mix a mix c;
+    synthesize disc;
+endprotocol
+
+labassistant main_babka_labka() labprotocol
+    testtube a;
+    testtube b;
+    testtube c;
+    testtube answer;
+
+    getorder a;
+    getorder b;
+    getorder c;
+
+    taste (a justlike H) labprotocol
+        taste (b justlike H) labprotocol
+            taste (c justlike H) labprotocol
+                answer is H filter He;
+                report answer;
+            endprotocol
+            emergencyroom labprotocol
+                answer is H;
+                report answer;
+            endprotocol
+        endprotocol
+        emergencyroom labprotocol
+            answer is He;
+            report answer;
+
+            answer is (H filter c) steal b;
+            report answer;
+        endprotocol
+    endprotocol
+    emergencyroom labprotocol
+        testtube disc;
+        disc is discriminant(a, b, c);
+        taste (disc justlike H) labprotocol
+            answer is He;
+            report answer;
+
+            answer is (H filter b) steal (Li mix a);
+            report answer;
+        endprotocol
+        emergencyroom labprotocol
+            taste (disc sourer H) labprotocol
+                answer is H;
+                report answer;
+            endprotocol
+            emergencyroom labprotocol
+                answer is Li;
+                report answer;
+
+                answer is (H filter b filter sqrt(disc)) steal (Li mix a);
+                report answer;
+
+                answer is (H filter b add sqrt(disc)) steal (Li mix a);
+                report answer;             
+            endprotocol
+        endprotocol 
+    endprotocol
+endprotocol
+

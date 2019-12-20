@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/alexey/Programming/ChemLang/digits.h
+
+/home/alexey/Programming/ChemLang/keywordlist.h
+
+/home/alexey/Programming/ChemLang/keywords.h
+keywordlist.h
+/home/alexey/Programming/ChemLang/keywordlist.h
+keywordlist.h
+/home/alexey/Programming/ChemLang/keywordlist.h
+keywordlist.h
+/home/alexey/Programming/ChemLang/keywordlist.h
+
 /home/alexey/Programming/ChemLang/main.cpp
 cstdio
 -
@@ -13,6 +25,26 @@ cstdlib
 -
 cassert
 -
+cctype
+-
+cstring
+-
 unistd.h
+-
+../Tree/Tree.h
+/home/alexey/Programming/Tree/Tree.h
+digits.h
+/home/alexey/Programming/ChemLang/digits.h
+keywords.h
+/home/alexey/Programming/ChemLang/keywords.h
+
+/home/alexey/Programming/Tree/Tree.h
+cstdlib
+-
+cstdio
+-
+cassert
+-
+cstring
 -
 
